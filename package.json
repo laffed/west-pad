@@ -24,5 +24,13 @@
   },
   "dependencies": {
     "cardinal-direction": "^1.1.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laffed/west-pad.git"
+  },
+    "bugs": {
+    "url": "https://github.com/laffed/west-pad/issues"
+  },
+  "homepage": "https://github.com/laffed/west-pad#readme"
 }
