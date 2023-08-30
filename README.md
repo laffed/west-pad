@@ -1,6 +1,6 @@
 ## west-pad
 
-Behold, a far superior alternative to (`left-pad`)[https://github.com/left-pad/left-pad].
+Behold, a far superior alternative to [`left-pad`](https://github.com/left-pad/left-pad).
 
 Insert padding to the West of a string.
 
