@@ -27,6 +27,6 @@ jobs:
         with:
           publish: pnpm run release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.WEST_PAD_PAT }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         
