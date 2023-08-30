@@ -2,7 +2,7 @@
 
 Behold, a far superior alternative to [`left-pad`](https://github.com/left-pad/left-pad).
 
-Insert padding to the West of a string.
+Inserts padding to the West of a string.
 
 ## Install
 
@@ -18,7 +18,7 @@ npm install west-pad
 type Direction = "N" | "S" | "E" | "W" | number;
 ```
 
-1a. west-pad exports a class to hold cardinal state for your repeated padding convenience 
+1. west-pad exports a class to hold cardinal state for your repeated padding convenience 
 
 ```ts
 import WestPad from 'west-pad';
@@ -40,10 +40,10 @@ westPad.updateDirection(newDirection);
 console.log(westPad(s, 2)); // "Hello World\n \n"
 ```
 
-1b. alternatively you can use the standalone function
+2. alternatively you can use the standalone function
 
 ```ts
-import {westPad} from 'west-pad';
+import { westPad } from 'west-pad';
 
 const direction = getDeviceDirection(); // "N"
 const s = "Hello World";
@@ -65,25 +65,27 @@ const s = "Hello World";
 
 const westPad = new WestPad(direction);
 
-const paddedWestFromMethod = westPad.pad(s, 3);
-console.log(paddedWestFromMethod); // "   Hello World"
-
 const paddedEastFromMethod = westPad.turnAroundThenPad(s, 3);
 console.log(paddedEastFromMethod); // "Hello World   "
 ```
 
 ```ts
-import {westPad, notWestPad} from 'west-pad';
+import { notWestPad } from 'west-pad';
 
 const direction = "N";
 const s = "Hello World";
 
-const paddedWest = westPad(direction, s, 3);
-console.log(paddedWest); // "   Hello World"
-
 const paddedEast = notWestPad(direction, s, 3);
 console.log(paddedEast); // "Hello World   "
 ```
+
+## Troubleshooting
+
+**Padding is being added in the wrong direction?**
+
+Step 1. Try turning your computer/device in a different direction.  
+Step 2. Profit  
+
 
 ## Parameters
 
@@ -133,10 +135,3 @@ console.log(paddedEast); // "Hello World   "
 | multiplicand | number | no; default = 1 | the number of times parameter `p` will be padded
 | p | string | no; default = " " | the string that will pad target string `s` `multiplicand` times
 
-
-## Troubleshooting
-
-***Padding is being added in the wrong direction?**
-
-Step 1. Try turning your computer/device in a different direction.
-Step 2. Profit

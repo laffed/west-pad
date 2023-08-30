@@ -89,6 +89,7 @@ const notWestPad = (direction: Direction | number, s: string, multiplicand: numb
     case "R": return `${p.repeat(multiplicand)}${s}`;
     case "T": return `${s}${("\n" + p).repeat(multiplicand)}`;
     case "B": return `${(p + "\n").repeat(multiplicand)}${s}`;
+    default: return s;
   }
 };
 
