@@ -1,14 +1,5 @@
 import WestPad, { westPad, notWestPad } from '../index';
 
-jest.mock('cardinal-direction', () => {
-  const originalModule = jest.requireActual('cardinal-direction');
-
-  return {
-    ...originalModule,
-  }
-});
-
-
 describe("WestPad", () => {
   it("should pad a string to the left", () => {
     expect.assertions(2);

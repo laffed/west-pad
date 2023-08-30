@@ -1,5 +1,3 @@
-import compass from 'cardinal-direction';
-
 const PadPosition = {
   N: "L",
   E: "B",
@@ -10,13 +8,25 @@ const PadPosition = {
 type Direction = keyof typeof PadPosition;
 type PadPosition = typeof PadPosition[Direction];
 
+const cardinalFromDegree = (degree: number): Direction => {
+  const d = degree % 360;
+  const nearestCardinal = Math.round(d / 90);
+  switch (nearestCardinal) {
+    case 0: return "N";
+    case 1: return "E";
+    case 2: return "S";
+    case 3: return "W";
+    default: return "N";
+  }
+};
+
 class WestPad {
   private direction: Direction;
   private padpos: PadPosition;
 
   constructor(direction: Direction | number) {
     if (typeof direction === 'number') {
-      this.direction = compass.cardinalFromDegree(direction % 360, 8) as Direction;
+      this.direction = cardinalFromDegree(direction);
     } else {
       this.direction = direction;
     }
@@ -26,7 +36,7 @@ class WestPad {
 
   updateDirection(direction: Direction | number) {
     if (typeof direction === 'number') {
-      this.direction = compass.cardinalFromDegree(direction % 360, 8) as Direction;
+      this.direction = cardinalFromDegree(direction);
     } else {
       this.direction = direction;
     }
@@ -57,7 +67,7 @@ class WestPad {
 
 const westPad = (direction: Direction | number, s: string, multiplicand: number = 1, p: string = " "): string => {
   const padpos = typeof direction === 'number'
-    ? PadPosition[compass.cardinalFromDegree(direction % 360, 8) as Direction]
+    ? PadPosition[cardinalFromDegree(direction)]
     : PadPosition[direction];
 
   switch (padpos) {
@@ -71,7 +81,7 @@ const westPad = (direction: Direction | number, s: string, multiplicand: number 
 
 const notWestPad = (direction: Direction | number, s: string, multiplicand: number = 1, p: string = " "): string => {
   const padpos = typeof direction === 'number'
-    ? PadPosition[compass.cardinalFromDegree(direction % 360, 8) as Direction]
+    ? PadPosition[cardinalFromDegree(direction)]
     : PadPosition[direction];
 
   switch (padpos) {

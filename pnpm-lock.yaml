@@ -4,11 +4,6 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-dependencies:
-  cardinal-direction:
-    specifier: ^1.1.1
-    version: 1.1.1
-
 devDependencies:
   '@changesets/cli':
     specifier: ^2.26.2
@@ -1499,10 +1494,6 @@ packages:
   /caniuse-lite@1.0.30001524:
     resolution: {integrity: sha512-Jj917pJtYg9HSJBF95HVX3Cdr89JUyLT4IZ8SvM5aDRni95swKgYi3TgYLH5hnGfPE/U1dg6IfZ50UsIlLkwSA==}
     dev: true
-
-  /cardinal-direction@1.1.1:
-    resolution: {integrity: sha512-TkVp8I4wIDmgG1i3zuggwUw0CusChN4qiEi4RWKhr7a4uwE+WjNo6OACCmCGMQ7vOOPkeJXVAvRB2oKm6nEc1Q==}
-    dev: false
 
   /chalk@2.4.2:
     resolution: {integrity: sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ==}

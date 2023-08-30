@@ -1,4 +1,4 @@
-name: Publish
+name: Validate
 on:
   push:
     branches:
@@ -21,12 +21,3 @@ jobs:
 
       - run: pnpm install --frozen-lockfile
       - run: pnpm lint && pnpm test
-      - name: Create Release MR
-        id: changesets
-        uses: changesets/action@v1
-        with:
-          publish: pnpm run release
-        env:
-          GITHUB_TOKEN: ${{ secrets.WEST_PAD_PAT }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        
