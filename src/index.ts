@@ -1,4 +1,4 @@
-import compass, { CardinalSubset } from 'cardinal-direction';
+import compass from 'cardinal-direction';
 
 const PadPosition = {
   N: "L",
@@ -16,7 +16,7 @@ class WestPad {
 
   constructor(direction: Direction | number) {
     if (typeof direction === 'number') {
-      this.direction = compass.cardinalFromDegree(direction % 360, CardinalSubset.Basic) as Direction;
+      this.direction = compass.cardinalFromDegree(direction % 360, 8) as Direction;
     } else {
       this.direction = direction;
     }
@@ -26,7 +26,7 @@ class WestPad {
 
   updateDirection(direction: Direction | number) {
     if (typeof direction === 'number') {
-      this.direction = compass.cardinalFromDegree(direction % 360, CardinalSubset.Basic) as Direction;
+      this.direction = compass.cardinalFromDegree(direction % 360, 8) as Direction;
     } else {
       this.direction = direction;
     }
@@ -57,7 +57,7 @@ class WestPad {
 
 const westPad = (direction: Direction | number, s: string, multiplicand: number = 1, p: string = " "): string => {
   const padpos = typeof direction === 'number'
-    ? PadPosition[compass.cardinalFromDegree(direction % 360, CardinalSubset.Basic) as Direction]
+    ? PadPosition[compass.cardinalFromDegree(direction % 360, 8) as Direction]
     : PadPosition[direction];
 
   switch (padpos) {
@@ -71,7 +71,7 @@ const westPad = (direction: Direction | number, s: string, multiplicand: number 
 
 const notWestPad = (direction: Direction | number, s: string, multiplicand: number = 1, p: string = " "): string => {
   const padpos = typeof direction === 'number'
-    ? PadPosition[compass.cardinalFromDegree(direction % 360, CardinalSubset.Basic) as Direction]
+    ? PadPosition[compass.cardinalFromDegree(direction % 360, 8) as Direction]
     : PadPosition[direction];
 
   switch (padpos) {
