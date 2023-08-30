@@ -1,6 +1,6 @@
 {
   "name": "west-pad",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "a better left-pad: adds padding in the West cardinal direction",
   "author": "laffed",
   "license": "MIT",
@@ -29,7 +29,7 @@
     "type": "git",
     "url": "git+https://github.com/laffed/west-pad.git"
   },
-    "bugs": {
+  "bugs": {
     "url": "https://github.com/laffed/west-pad/issues"
   },
   "homepage": "https://github.com/laffed/west-pad#readme"
