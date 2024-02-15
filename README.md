@@ -1,8 +1,19 @@
-## west-pad
+# west-pad
 
 Behold, a far superior alternative to [`left-pad`](https://github.com/left-pad/left-pad).
 
 Inserts padding to the West of a string.
+
+## Praise for `west-pad`
+
+> West pad is absolute 🔥
+> For the past 6 months my team has been migrating 2 of our in house web apps from left-pad to west-pad and TBH I just wish we’d done it sooner.
+> We’re iterating way faster now, initial page load time is down 30%, and generally our apps are just way less buggy
+> Highly recommend
+> -- <cite>[source](https://www.reddit.com/r/reactjs/comments/165y1hm/comment/jygzae3/?utm_source=share&utm_medium=web2x&context=3)<cite>
+
+> west pad is best pad
+> -- <cite>[source](https://www.reddit.com/r/reactjs/comments/165y1hm/comment/jyhqpyw/?utm_source=share&utm_medium=web2x&context=3)<cite>
 
 ## Install
 
